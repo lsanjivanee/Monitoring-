@@ -1,0 +1,14 @@
+kind: PersistentVolumeClaim 
+apiVersion: v1 
+metadata: 
+  name: postgres-pv-claim
+  namespace: monitoring
+  labels: 
+    app: postgres 
+spec: 
+  storageClassName: standard
+  accessModes: 
+    - ReadWriteMany 
+  resources: 
+    requests: 
+      storage: 5Gi
